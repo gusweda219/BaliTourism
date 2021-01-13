@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Nunito+Sans:wght@400;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   font-family: 'Nunito Sans', sans-serif;
+}
+
+.jumbotron {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/bali.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0 180px;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav h1 {
+    font-size: 2em;
+    font-family: 'Galada', cursive;
+    transition: 0.6s;
+    color: white;
+}
+
+.jumbotron .display {
+    text-align: center;
+}
+
+.jumbotron .display{
+    margin-top: 40vh;
+    color: white;
+}
+
+
+nav ul li {
+    margin-left: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    transition: 0.6s;
+}
+
+nav ul li a:hover {
+    border-bottom: 1px solid blue;
+    color: blue;
+    transition: 2s;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-45deg, rgba(52, 213, 235, 0.8), rgba(52, 168, 235, 0.5));
+}
+
+#layanan {
+    padding: 0 180px;
+}
+
+.info-panel-layanan {
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: -95px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.flex-baris {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.flex-kolom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(0, 176, 255);
+    text-align: center;
+}
+
+.flex-kolom i {
+    font-size: 3em;
+}
+
+.flex-kolom h2 {
+    font-size: 20px;
+}
+
+.flex-kolom i, h2 {
+    margin-bottom: 10px;
+}
+
+.fitur-layanan {
+    display: flex;
+    justify-content: space-between;
+}
+
+.isi-fitur-layanan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.fitur-layanan > img {
+    width: 40%;
+}
+
+.isi-fitur-layanan img {
+    width: 60%;
+}
+
+.bg-data-saya {
+    width: 100%;
+    background: linear-gradient(-45deg, rgb(52, 213, 235), rgb(52, 168, 235));
+    margin-top: 20px;
+    text-align: center;
+    padding: 30px;
+}
+
+.bg-data-saya h2 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.data-saya {
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 5%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.data-saya img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.data-saya .mahasiswa {
+    background-color: rgb(0, 176, 255);
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+    color: white;
+}
+
+.footer-baris {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px 180px;
+}
+
+.footer-kolom {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+.footer-kolom.kontak {
+    align-items: flex-end;
+}
+
+.footer-kolom ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.footer-kolom ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 10px;
+    color: black;
+    font-size: small;
+}
+
+.ikon-baris {
+    font-size: 30px;
+}
+
+
+@media screen and (min-width: 769px) {
+    nav {
+        transition: 0.6s;
+    }
+    
+    nav.sticky {
+        background-color: white;
+        width: 100%;
+        height: 60px;
+        box-shadow: 0 3px 20px rgba(0, 176, 255, 0.5);
+    }
+    
+    nav.sticky h1 {
+        color: rgb(0, 176, 255);
+    }
+
+    nav.sticky ul li a {
+        color: black;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    nav {
+        padding: 0 120px;
+    }
+
+    #layanan {
+        padding: 0 120px;
+    }
+
+    .footer-baris {
+        padding: 40px 120px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    nav {
+        padding: 0 40px;
+    }
+
+    #layanan {
+        padding: 0 40px;
+    }
+
+    .flex-baris {
+        padding: 40 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #layanan {
+        padding: 0 100px;
+    }
+
+    nav {
+        padding: 0 60px;
+        background-color: white;
+        height: 60px;
+    }
+
+    nav.sticky {
+        box-shadow: 0 3px 20px rgba(0, 176, 255, 0.5);
+    }
+
+
+    nav .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background-color: white;
+        top: 59px;
+        left: -100%;
+        transition: 0.5s;
+        display: block;
+        text-align: center;
+    }
+
+    
+    nav ul.active {
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 40px 0;
+    }
+
+    nav h1 {
+        font-size: 1.5em;
+        color: rgb(0, 176, 255);
+    }
+
+    nav ul li a {
+        color: black;
+    }
+
+    .flex-baris {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .flex-kolom {
+        margin: 20px 0;
+        width: 80%;
+    }
+
+    .fitur-layanan {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .isi-fitur-layanan img{
+        margin: 40px auto;
+    }
+
+    .fitur-layanan > img {
+        width: 80%;
+    }
+
+    .isi-fitur-layanan img {
+        width: 80%;
+    }
+
+    .footer-baris {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 40px 100px;
+    }
+
+    .footer-kolom, .footer-kolom.kontak {
+        align-items: center;
+    }
+    
+
+   
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        padding: 0 40px;
+    }
+
+    #layanan {
+        padding: 0 40px;
+    }
+
+    .footer-baris {
+        padding: 40 40px;
+    }
+
+    .data-saya {
+        width: 300px;
+        height: 300px;
+        font-size: small;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    .footer-kolom ul li a {
+        font-size: 8px;
+    }
+
+    .footer-baris {
+        padding: 40px 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .data-saya {
+        width: 250px;
+        height: 250px;
+        font-size: xx-small;
+    }
+
+    .flex-kolom {
+        font-size: x-small;
+    }
+
+    .isi-fitur-layanan {
+        font-size: small;
+    }
+
+    nav {
+        padding: 0 20px;
+    }
+
+    #layanan {
+        padding: 0 20px;
+    }
+}
